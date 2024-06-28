@@ -33,6 +33,7 @@ import {
   DoctorPrivateRoute,
   PatientPrivateRoute,
 } from "./commons/PrivateRoutes.jsx";
+import ApiFetch from "./pages/ApiFetch/ApiFetch.jsx";
 
 const router = createBrowserRouter([
   {
@@ -154,6 +155,10 @@ const router = createBrowserRouter([
   {
     path: "/doctor-login",
     element: <DoctorLogin />,
+  },
+  {
+    path: "/api-fetch",
+    element: <ApiFetch />,
   },
 ]);
 

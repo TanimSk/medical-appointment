@@ -96,7 +96,7 @@ class MessageSerializer(serializers.ModelSerializer):
 
 class MedicalRecordSerializer(serializers.ModelSerializer):
     doctor = serializers.PrimaryKeyRelatedField(read_only=True)
-    doctor_name = serializers.CharField(source="doctor.name")
+    doctor_name = serializers.CharField(source="doctor.name", read_only=True)
 
     class Meta:
         fields = "__all__"

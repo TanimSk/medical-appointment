@@ -10,7 +10,7 @@ import pytz
 
 @shared_task
 def send_appointment_reminders():
-    target_timezone = pytz.timezone("Asia/Dhaka")
+    target_timezone = pytz.timezone("Europe/Amsterdam")
     now = timezone.now().astimezone(target_timezone)
     ten_minutes_later = now + timedelta(minutes=10)
 

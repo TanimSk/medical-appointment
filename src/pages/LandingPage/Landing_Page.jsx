@@ -6,6 +6,7 @@ import styles from "../../style";
 import Logo from "../../assets/stethoscope.png";
 import Doctor from "../../assets/doctor.png";
 import Patient from "../../assets/patient.png";
+import Bacteria from "../../assets/bacteria.png";
 import { FaSearch } from "react-icons/fa";
 
 const Landing_Page = () => {
@@ -37,8 +38,8 @@ const Landing_Page = () => {
                   }}
                   className="flex items-center justify-center space-x-1 text-xl font-bold cursor-pointer"
                 >
-                  <span className="text-[#76c3ed]">Doctor</span>
-                  <span>Appoinment</span>
+                  <span className="text-[#76c3ed]">Easy</span>
+                  <span>Doc</span>
                 </h1>
               </div>
             </div>
@@ -69,7 +70,7 @@ const Landing_Page = () => {
                   id="item"
                   className="flex flex-wrap justify-center md:gap-8 gap-3 "
                 >
-                  <div className="flex flex-col items-center justify-center mr-[3rem]">
+                  <div className="flex flex-col items-center justify-center">
                     <div className="w-20 h-20 p-2 flex items-center justify-center rounded-full mb-4 bg-[#3c3c3c75]">
                       <span className="text-black w-10 h-10 flex items-center justify-center rounded-full">
                         <img src={Doctor} alt="doctor" />
@@ -94,7 +95,7 @@ const Landing_Page = () => {
                   <div className="flex flex-col items-center justify-center">
                     <div className="w-20 h-20 p-2 flex items-center justify-center rounded-full bg-[#3c3c3c75] mb-4">
                       <span className="text-black w-10 h-10 flex items-center justify-center rounded-full">
-                        <img src={Patient} alt="doctor" className="w-[5rem]" />
+                        <img src={Patient} alt="patient" className="w-[5rem]" />
                       </span>
                     </div>
                     <div className="text-center">
@@ -103,6 +104,25 @@ const Landing_Page = () => {
                         className="bg-[#76c3ed] space-x-1 flex items-center justify-center hover:bg-[#7dcefa] rounded-md px-3 py-2 cursor-pointer text-md font-semibold text-white"
                       >
                         <span>Patient Dashboard</span>
+                        <div>
+                          <IoLogInOutline size={25} className="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center">
+                    <div className="w-20 h-20 p-2 flex items-center justify-center rounded-full bg-[#3c3c3c75] mb-4">
+                      <span className="text-black w-10 h-10 flex items-center justify-center rounded-full">
+                        <img src={Bacteria} alt="bacteria" className="w-[5rem]" />
+                      </span>
+                    </div>
+                    <div className="text-center">
+                      <div
+                        onClick={() => navigate("/api-fetch")}
+                        className="bg-[#76c3ed] space-x-1 flex items-center justify-center hover:bg-[#7dcefa] rounded-md px-3 py-2 cursor-pointer text-md font-semibold text-white"
+                      >
+                        <span>Covid Updates</span>
                         <div>
                           <IoLogInOutline size={25} className="" />
                         </div>

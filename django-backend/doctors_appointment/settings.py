@@ -180,14 +180,14 @@ ACCOUNT_CONFIRM_EMAIL_ON_GET = False
 
 CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
-CELERY_TIMEZONE = 'Asia/Dhaka'
+CELERY_TIMEZONE = "Europe/Amsterdam"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "Asia/Dhaka"
+TIME_ZONE = "Europe/Amsterdam"
 USE_I18N = True
 USE_TZ = True
 

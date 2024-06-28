@@ -28,7 +28,7 @@ class DoctorListAPI(APIView):
     serializer_class = DoctorSerializer
 
     def get(self, request, format=None, *args, **kwargs):
-        instance = DoctorProfile.objects.all()
+        instance = DoctorProfile.objects.all().order_by("-id")
         serialized_data = self.serializer_class(instance, many=True)
         return Response(serialized_data.data)
 

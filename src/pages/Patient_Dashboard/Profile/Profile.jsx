@@ -207,7 +207,7 @@ const Profile = () => {
 
                 <div>
                   <label
-                    htmlFor="phone"
+                    htmlFor="phone_number"
                     className="block mb-2 text-sm font-medium text-gray-900"
                   >
                     Phone number
@@ -215,7 +215,7 @@ const Profile = () => {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
+                    name="phone_number"
                     value={formData.phone_number}
                     onChange={handleChange}
                     className={`bg-gray-100 border-2 outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 ${

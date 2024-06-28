@@ -101,10 +101,14 @@ const Medical_Records = () => {
         if (res.ok) {
           return res.json();
         }
-        return res.text();
+        return null;
       })
       .then((data) => {
-        if (data == null) return;
+        console.log(data);
+        if (data == null) {
+          alert("An error uccored, please upload the image properly");
+          return;
+        }
         alert("Papers sent to the patient successfully");
       });
   };
@@ -144,6 +148,13 @@ const Medical_Records = () => {
             className="block w-full  text-sm p-4 text-gray-900 border-2 border-[#7EABFE] rounded-lg cursor-pointer bg-transparent  focus:outline-none space-y-3 "
             {...register("patient")}
           >
+            <option
+              className="p-3 font-bold space-x-3"
+              // value={item?.id}
+              // key={item?.id}
+            >
+              select patient
+            </option>
             {patient.map((item, index) => (
               <option
                 className="p-3 font-bold space-x-3"
