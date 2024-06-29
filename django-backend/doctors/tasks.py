@@ -12,7 +12,7 @@ import pytz
 def send_appointment_reminders():
     target_timezone = pytz.timezone("Europe/Amsterdam")
     now = timezone.now().astimezone(target_timezone)
-    ten_minutes_later = now + timedelta(minutes=10)
+    ten_minutes_later = now + timedelta(minutes=30)
 
     # print(now)
     # print(ten_minutes_later)

@@ -80,7 +80,7 @@ class ChatPeopleAPI(APIView):
 
     def get(self, request, format=None, *args, **kwargs):
         doctors_with_messages = DoctorProfile.objects.filter(
-            Exists(Appointment.objects.filter(doctor=OuterRef("pk")))
+            Exists(Appointment.objects.filter(patient=OuterRef("pk")))
         )
 
         if doctors_with_messages.count() == 0:
