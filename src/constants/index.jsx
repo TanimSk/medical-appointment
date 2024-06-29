@@ -1,6 +1,6 @@
 import Avatar from "../assets/Avatar.jpeg";
 
-export const baseUrl = "http://127.0.0.1:8000";
+export const baseUrl = "https://tiy-efgkjrw6xd.miahtrip.com";
 
 export const weekDays = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
 

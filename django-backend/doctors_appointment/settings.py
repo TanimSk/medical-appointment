@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-0^uy^&gzu&vdtc654469)2b+-m*6-07422tt(me9u)bb!$s@%a
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-# CSRF_TRUSTED_ORIGINS = ["https://api.miahtrip.com", "https://api.discoverasiatrip.com"]
+CSRF_TRUSTED_ORIGINS = ["https://tiy-efgkjrw6xd.miahtrip.com", "https://easy-doc-jade.vercel.app"]
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True
 # Update this in production
