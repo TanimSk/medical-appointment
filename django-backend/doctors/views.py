@@ -61,7 +61,7 @@ class DoctorAppointmentsAPI(APIView):
         instance = Appointment.objects.filter(
             doctor=request.user.doctor,
             appointment_status=("pending" if (status == None) else "approved"),
-        )
+        ).order_by("-id")
         serialized_data = self.serializer_class(instance, many=True)
         return Response(serialized_data.data)
 
