@@ -9,7 +9,7 @@ import axios from "axios";
 
 const Profile = () => {
   // const [image, setImage] = useState(Avater);
-  const [isEditing, setIsEditing] = useState(true); 
+  const [isEditing, setIsEditing] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     profile_img: "",
@@ -34,8 +34,13 @@ const Profile = () => {
           },
         }
       );
-      console.log(response.data.data.url);
-      setFormData({ ...formData, profile_img: response.data.data.url });
+      if (response.status == 200) {
+        alert("Image Uploaded");
+        console.log(response.data.data.url);
+        setFormData({ ...formData, profile_img: response.data.data.url });
+      } else {
+        alert("Couldn't upload the image properly");
+      }
     } catch (error) {
       console.error("Error uploading image to imgbb", error);
     }
@@ -67,7 +72,6 @@ const Profile = () => {
         alert("Successfully updated profile");
       });
   };
-
 
   // get profile info
   useEffect(() => {

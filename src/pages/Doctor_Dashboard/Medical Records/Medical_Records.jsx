@@ -50,8 +50,15 @@ const Medical_Records = () => {
           },
         }
       );
+
+      if (response.status == 200) {
+        alert("Image Uploaded");
+        console.log(response.data.data.url);
+        setValue("file_url", response.data.data.url); // Set the img_url field in the form
+      } else {
+        alert("Couldn't upload the image properly");
+      }
       console.log(response.data.data.url);
-      setValue("file_url", response.data.data.url); // Set the img_url field in the form
     } catch (error) {
       console.error("Error uploading image to imgbb", error);
     }
@@ -110,6 +117,7 @@ const Medical_Records = () => {
           return;
         }
         alert("Papers sent to the patient successfully");
+        location.reload();
       });
   };
 

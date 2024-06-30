@@ -17,6 +17,12 @@ const Patient_Registration = () => {
     formState: { errors, isSubmitting },
   } = useForm();
 
+  const createNotification = (type) => {
+    return () => {
+      NotificationManager.info(type);
+    };
+  };
+
   const [isLoading, setLoading] = useState(true);
   const navigate = useNavigate();
   const [image, setImage] = useState(Avater);
@@ -47,8 +53,13 @@ const Patient_Registration = () => {
           },
         }
       );
-      console.log(response.data.data.url);
-      setValue("profile_img", response.data.data.url); // Set the img_url field in the form
+      if (response.status == 200) {
+        alert("Image Uploaded");
+        console.log(response.data.data.url);
+        setValue("profile_img", response.data.data.url);
+      } else {
+        alert("Couldn't upload the image properly");
+      }
     } catch (error) {
       console.error("Error uploading image to imgbb", error);
     }
@@ -56,6 +67,10 @@ const Patient_Registration = () => {
 
   const onSubmit = (data) => {
     if (!("profile_img" in data)) {
+      if (image !== Avater) {
+        alert("Image not uploaded yet, Please wait...");
+        return;
+      }
       alert("Please upload your Profile Image");
       return;
     }
@@ -124,6 +139,7 @@ const Patient_Registration = () => {
               </label>
               <input
                 type="file"
+                accept="image/*"
                 id="fileInput"
                 className="opacity-0 hidden absolute top-0 left-0 w-full h-full cursor-pointer"
                 onChange={handleImageChange}

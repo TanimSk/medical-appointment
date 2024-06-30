@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // Landing Page
 import Landing_page from "./pages/LandingPage/Landing_Page.jsx";
+import "react-notifications/lib/notifications.css";
 
 // Patient
 import Patient_LandingPage from "./pages/Patient_Dashboard/Patient_LandingPage.jsx";
@@ -167,5 +168,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
+    
   </React.StrictMode>
 );
