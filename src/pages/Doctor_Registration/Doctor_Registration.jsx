@@ -74,6 +74,12 @@ const Patient_Registration = () => {
       alert("Please upload your Profile Image");
       return;
     }
+    
+    if (data["password1"].length < 6) {
+      alert("Password length can't be less than 6");
+      return;
+    }
+
     if (data["password1"] !== data["password2"]) {
       alert("The passwords do not match");
       return;
