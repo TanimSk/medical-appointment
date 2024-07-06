@@ -65,7 +65,7 @@ const Modal = ({ isVisible, onClose, patient }) => {
       <div className="flex flex-col relative">
         <div
           onClick={(e) => e.stopPropagation()}
-          className="rounded-md p-8 space-y-4 bg-white flex flex-col text-center items-center"
+          className="rounded-md p-8 space-y-4 bg-white flex flex-col text-center items-center max-w-[35rem] m-2"
         >
           <div
             onClick={(e) => {
